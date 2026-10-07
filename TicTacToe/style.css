@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #050805;
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+.game {
+    width: 380px;
+    padding: 30px;
+
+    text-align: center;
+
+    background: #0b120d;
+    border: 1px solid #1f6f3d;
+    border-radius: 16px;
+
+    box-shadow: 0 0 30px rgba(0, 255, 100, 0.08);
+}
+
+h1 {
+    margin-bottom: 25px;
+
+    color: #39ff88;
+    font-size: 32px;
+}
+
+/* ---------------- PLAYERS ---------------- */
+
+.players {
+    display: flex;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.player {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.player label {
+    color: #39ff88;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.player input {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #1f6f3d;
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #101a13;
+    color: white;
+
+    font-size: 14px;
+}
+
+.player input:focus {
+    border-color: #39ff88;
+}
+
+.player input::placeholder {
+    color: #68736c;
+}
+
+/* ---------------- TURN ---------------- */
+
+.turn {
+    margin-bottom: 20px;
+
+    color: #9ca3a0;
+    font-size: 15px;
+}
+
+/* ---------------- BOARD ---------------- */
+
+.board {
+    width: 270px;
+    height: 270px;
+
+    margin: 0 auto 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #1f6f3d;
+    border-radius: 8px;
+
+    background: #101a13;
+    color: #39ff88;
+
+    font-size: 42px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.cell:hover {
+    background: #14251a;
+    border-color: #39ff88;
+}
+
+.cell:disabled {
+    cursor: default;
+}
+
+/* ---------------- RESTART ---------------- */
+
+.restart {
+    padding: 11px 24px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #39ff88;
+    color: #061009;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.restart:hover {
+    background: #20e66e;
+    transform: translateY(-1px);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 450px) {
+
+    .game {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .board {
+        width: 240px;
+        height: 240px;
+    }
+
+    .cell {
+        font-size: 36px;
+    }
+}
