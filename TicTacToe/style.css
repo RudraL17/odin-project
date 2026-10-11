@@ -39,51 +39,6 @@ h1 {
 
 /* ---------------- PLAYERS ---------------- */
 
-.players {
-    display: flex;
-    gap: 12px;
-
-    margin-bottom: 20px;
-}
-
-.player {
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.player label {
-    color: #39ff88;
-
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.player input {
-    width: 100%;
-
-    padding: 10px;
-
-    border: 1px solid #1f6f3d;
-    border-radius: 7px;
-
-    outline: none;
-
-    background: #101a13;
-    color: white;
-
-    font-size: 14px;
-}
-
-.player input:focus {
-    border-color: #39ff88;
-}
-
-.player input::placeholder {
-    color: #68736c;
-}
 
 /* ---------------- TURN ---------------- */
 
